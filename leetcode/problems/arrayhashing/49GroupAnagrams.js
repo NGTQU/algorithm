@@ -8,10 +8,10 @@ const mergeSortString = (str) => {
   const right = str.slice(mid);
 
   return merge(mergeSortString(left), mergeSortString(right));
-}
+};
 
 const merge = (left, right) => {
-  let result = '';
+  let result = "";
   let leftIndex = 0;
   let rightIndex = 0;
 
@@ -24,34 +24,34 @@ const merge = (left, right) => {
       rightIndex++;
     }
   }
-  
+
   return result + left.slice(leftIndex) + right.slice(rightIndex);
-}
+};
 
 /**
  * @param {string[]} strs
  * @return {string[][]}
  */
 const groupAnagrams = (strs) => {
-    const occurrenceObject = {}
-    for (let i = 0; i < strs.length; i++) {
-        const sortedString = mergeSortString(strs[i])
-        if (occurrenceObject[sortedString] !== undefined) {
-            occurrenceObject[sortedString].push(i);
-        } else {
-            occurrenceObject[sortedString] = [i];
-        }
+  const occurrenceObject = {};
+  for (let i = 0; i < strs.length; i++) {
+    const sortedString = mergeSortString(strs[i]);
+    if (occurrenceObject[sortedString] !== undefined) {
+      occurrenceObject[sortedString].push(i);
+    } else {
+      occurrenceObject[sortedString] = [i];
     }
-    const results = [];
-    let occurrenceArray;
-    for (const property in occurrenceObject) {
-        occurrenceArray = [];
-        for (let i = 0; i < occurrenceObject[property].length; i++) {
-            occurrenceArray.push(strs[occurrenceObject[property][i]]);
-        }
-        results.push(occurrenceArray);
+  }
+  const results = [];
+  let occurrenceArray;
+  for (const property in occurrenceObject) {
+    occurrenceArray = [];
+    for (let i = 0; i < occurrenceObject[property].length; i++) {
+      occurrenceArray.push(strs[occurrenceObject[property][i]]);
     }
-    return results;
+    results.push(occurrenceArray);
+  }
+  return results;
 };
 
 console.log(groupAnagrams(["abc", "bac", "jjj"]));
