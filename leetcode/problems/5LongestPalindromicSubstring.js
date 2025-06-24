@@ -42,3 +42,4 @@ console.log(longestPalindrome("a"));
 console.log("abc");
 console.log("def");
 console.log("ghj");
+console.log("ikl");
