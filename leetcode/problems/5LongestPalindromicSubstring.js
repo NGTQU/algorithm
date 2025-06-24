@@ -40,3 +40,4 @@ console.log(longestPalindrome("babad"));
 console.log(longestPalindrome("cbbd"));
 console.log(longestPalindrome("a"));
 console.log("testing again again");
+console.log("testing");
