@@ -16,3 +16,6 @@ const isAnagram = (s, t) => {
   }
   return true;
 };
+
+console.log(isAnagram("ab", "ba"));
+console.log(isAnagram("ab", "bac"));
