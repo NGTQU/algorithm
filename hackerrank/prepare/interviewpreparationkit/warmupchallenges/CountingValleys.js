@@ -1,4 +1,4 @@
-function countingValleys(steps, path) {
+const countingValleys = (steps, path) => {
   // Write your code here
   let seaLevel = 0;
   let count = 0;
@@ -21,6 +21,6 @@ function countingValleys(steps, path) {
     }
   }
   return count;
-}
+};
 
 console.log(countingValleys(8, "DDUUUUDD"));

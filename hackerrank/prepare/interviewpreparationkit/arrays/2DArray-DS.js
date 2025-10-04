@@ -1,4 +1,4 @@
-function hourglassSum(arr) {
+const hourglassSum = (arr) => {
   // Write your code here
   let horizontalIndex = 0;
   let verticalIndex = 0;
@@ -24,7 +24,7 @@ function hourglassSum(arr) {
     }
   }
   return maxSum;
-}
+};
 console.log(
   hourglassSum([
     [1, 1, 1, 0, 0, 0],

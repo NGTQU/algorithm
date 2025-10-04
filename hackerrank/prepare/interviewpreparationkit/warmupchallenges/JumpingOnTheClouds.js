@@ -1,4 +1,4 @@
-function jumpingOnClouds(c) {
+const jumpingOnClouds = (c) => {
   // Write your code here
   let count = 0;
   let i = 0;
@@ -11,6 +11,6 @@ function jumpingOnClouds(c) {
     count++;
   }
   return count;
-}
+};
 
 console.log(jumpingOnClouds([0, 0, 1, 0, 0, 1, 0]));
