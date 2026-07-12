@@ -24,7 +24,7 @@ const numEquivDominoPairs = (dominoes) => {
   }
 
   return count;
-};
+}; // time limit exceeded
 
 console.log(
   numEquivDominoPairs([
